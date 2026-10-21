@@ -1,0 +1,25 @@
+# Radar sysmodule manifest (PLAN P2.3.2). Schema is provisional until the
+# composer (P2.3.3) is built.
+[module]
+codename = "radar"
+summary  = "On-device IPC boundary tracer; emits RADARTR1 traces"
+kind     = "sysmodule"          # runs as a sysmodule (not a KIP)
+boot      = "on-demand"         # started only when tracing is requested
+default_enabled = false         # off by default; research tool, not a shipped feature
+
+[interaction]
+role      = "mitm"              # intercepts IPC via libstratosphere sf mitm
+adds      = []                  # adds no service of its own
+replaces  = []                  # replaces no Horizon module
+mitm_targets = []               # configured at runtime; empty = trace nothing
+
+[target]
+reference_firmware = "23.0.1"   # PLAN ADR-004
+
+[budget]
+# Memory budget (PLAN P2.4). To be measured; placeholder.
+heap_kib = 0
+
+[provenance]
+license = "GPL-2.0-only"
+notes   = "Verdant-authored. Trace output of Nintendo services is research material (RULES.md Rule C)."

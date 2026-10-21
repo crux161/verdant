@@ -1,0 +1,59 @@
+# ============================================================================
+# Verdant .gitignore
+# ============================================================================
+
+# --- RESEARCH WORKSPACE: NEVER COMMIT, NEVER PUSH --------------------------
+# The RESOURCES/ directory is the research workspace. Nothing inside it may
+# ever enter the repository under any circumstance. See RULES.md (Rule 0,
+# Rule C) and PLAN.md (the Observatory). This entry is a safety belt, not the
+# policy itself — the policy is that research material never leaves RESOURCES.
+RESOURCES/
+resources/
+RESOURCES
+**/RESOURCES/
+
+# --- Proprietary material: defense in depth --------------------------------
+# These must never appear anywhere in the tree, inside RESOURCES or not.
+*.keys
+prod.keys
+title.keys
+dev.keys
+*.bin.enc
+Firmware*.zip
+firmware*.zip
+*.nca
+*.nsp
+*.xci
+*.nso
+*.kip
+*.istorage
+package1
+package2
+BOOT0
+BOOT1
+PRODINFO*
+
+# --- Build output ----------------------------------------------------------
+/build/
+/out/
+*.o
+*.a
+*.elf
+*.nro
+*.lst
+*.map
+
+# --- Tooling / OS ----------------------------------------------------------
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+
+# --- Research tooling artifacts (in case a tool is ever run near the tree) --
+*.gpr          # Ghidra project
+*.rep          # Ghidra repository
+*.i64 *.idb    # IDA databases
+*.bndb         # Binary Ninja
