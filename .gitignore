@@ -11,7 +11,8 @@ RESOURCES/
 resources/
 RESOURCES
 **/RESOURCES/
-
+JOURNAL/
+**/JOURNAL/
 # --- Proprietary material: defense in depth --------------------------------
 # These must never appear anywhere in the tree, inside RESOURCES or not.
 *.keys
@@ -59,3 +60,4 @@ __pycache__/
 *.bndb         # Binary Ninja
 verdant-horizon.rep/
 .gitignore
+JOURNAL/
