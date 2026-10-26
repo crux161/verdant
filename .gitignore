@@ -57,3 +57,5 @@ __pycache__/
 *.rep          # Ghidra repository
 *.i64 *.idb    # IDA databases
 *.bndb         # Binary Ninja
+verdant-horizon.rep/
+.gitignore
